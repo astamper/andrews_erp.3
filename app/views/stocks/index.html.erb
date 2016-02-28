@@ -1,0 +1,41 @@
+<h1>Listing stocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Intitial quantity</th>
+      <th>Current quantity</th>
+      <th>Status</th>
+      <th>Purchase manufacture date</th>
+      <th>Expiration date</th>
+      <th>Price per unit</th>
+      <th>Supplier</th>
+      <th>Identifier</th>
+      <th>Stocktype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stocks.each do |stock| %>
+      <tr>
+        <td><%= stock.intitial_quantity %></td>
+        <td><%= stock.current_quantity %></td>
+        <td><%= stock.status %></td>
+        <td><%= stock.purchase_manufacture_date %></td>
+        <td><%= stock.expiration_date %></td>
+        <td><%= stock.price_per_unit %></td>
+        <td><%= stock.supplier %></td>
+        <td><%= stock.identifier %></td>
+        <td><%= stock.stocktype %></td>
+        <td><%= link_to 'Show', stock %></td>
+        <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+        <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stock', new_stock_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Intitial quantity:</strong>
+  <%= @stock.intitial_quantity %>
+</p>
+
+<p>
+  <strong>Current quantity:</strong>
+  <%= @stock.current_quantity %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @stock.status %>
+</p>
+
+<p>
+  <strong>Purchase manufacture date:</strong>
+  <%= @stock.purchase_manufacture_date %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @stock.expiration_date %>
+</p>
+
+<p>
+  <strong>Price per unit:</strong>
+  <%= @stock.price_per_unit %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @stock.supplier %>
+</p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @stock.identifier %>
+</p>
+
+<p>
+  <strong>Stocktype:</strong>
+  <%= @stock.stocktype %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>
