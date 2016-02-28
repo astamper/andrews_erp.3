@@ -1,6 +1,5 @@
-<h1>Editing batch</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @batch %> |
-<%= link_to 'Back', batches_path %>
+<%- model_class = Batch -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Batch %></h1>
+</div>
+<%= render :partial => 'form' %>
