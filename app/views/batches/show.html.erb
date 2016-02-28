@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacture date:</strong>
+  <%= @batch.manufacture_date %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @batch.quantity %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @batch.status %>
+</p>
+
+<p>
+  <strong>Stocktype:</strong>
+  <%= @batch.stocktype %>
+</p>
+
+<%= link_to 'Edit', edit_batch_path(@batch) %> |
+<%= link_to 'Back', batches_path %>

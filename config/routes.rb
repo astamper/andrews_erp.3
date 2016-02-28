@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :batches
+
   resources :stocks
 
   resources :customers
